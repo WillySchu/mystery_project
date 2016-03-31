@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  h1 New albums
+
+  form(action="/albums", method="POST")
+    div
+      h3 Artist
+      input(type="text" name="artist_name")
+
+    div
+      h3 Album
+      input(type="text" name="album_name")
+
+    div
+      h3 Genre
+      select(name="genre")
+        option(value="jazz") JAZZ
+        option(value="rock") ROCK
+
+    div
+      h3 Stars
+      span 1
+      input(type="radio" name="stars" value="1")
+      input(type="radio" name="stars" value="2")
+      input(type="radio" name="stars" value="3")
+      input(type="radio" name="stars" value="4")
+      input(type="radio" name="stars" value="5")
+      span 5
+
+
+    div
+      br
+      input(type="hidden" name="explicit" value="false")
+      input(name="explicit" type="checkbox" value="true")
+      span Contains explicit lyrics
+
+
+    div
+      br
+      button(type="submit") Create Album
+      a(href="/albums") Cancel
