@@ -5,7 +5,7 @@ extend layout
 block content
   h1 New albums
 
-  form(action="/albums", method="POST")
+  form(action="/albums/?_method=PUT&id=" + theAlbum.id, method="POST")
     div
       h3 Artist
       input(type="text" name="artist_name" value= theAlbum.artist)

@@ -3,4 +3,11 @@ extends layout
 block content
   h1= theAlbum.name
 
+  h3 genre: #{theAlbum.genre}
+
+  h3 artist: #{theAlbum.artist}
+
   a(href="/albums/" + theAlbum.id + '/edit') Edit
+
+  form(action="albums/?_method=DELETE&id="+theAlbum.id, method="POST")
+    button(name="Delete" type="submit" )
