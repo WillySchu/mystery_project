@@ -1,0 +1,6 @@
+extends layout
+
+block content
+  h1= theAlbum.name
+
+  a(href="/albums/" + theAlbum.id + '/edit') Edit

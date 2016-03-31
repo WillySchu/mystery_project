@@ -4,3 +4,15 @@ block content
   h1 Albums
 
   a(href="/albums/new") New Album
+
+  table
+    thead
+      tr
+        th ID
+        th Name
+    tbody
+      for album in allAlbums
+        tr
+          td= album.id
+          td
+            a(href='/albums/'+ album.id)= album.name
