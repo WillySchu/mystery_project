@@ -24,6 +24,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/albums', albums);
+app.get('/', function(req, res, next) {
+  res.render('landing');
+})
 
 
 // catch 404 and forward to error handler
