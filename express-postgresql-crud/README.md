@@ -328,7 +328,7 @@ The hardest part will be getting the select field to be preselected.  [This answ
 ### BUT STOP - Create a sequence diagram _first_
 
 Draw a sequence diagram of what the update action will be.  Include the redirect to the show page.
-
+![](http://imgur.com/edit)
 ```
 participant Browser
 participant Express
