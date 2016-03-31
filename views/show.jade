@@ -9,5 +9,5 @@ block content
 
   a(href="/albums/" + theAlbum.id + '/edit') Edit
 
-  form(action="albums/?_method=DELETE&id="+theAlbum.id, method="POST")
+  form(action="albums/" + theAlbum.id +"/DELETE?_method=DELETE&id="+theAlbum.id, method="POST")
     button(name="Delete" type="submit" )
